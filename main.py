@@ -93,7 +93,8 @@ class MyApp(App):
             else:
                 self.label.text = "Failed to generate image. Try again."
         else:
-            self.label.text = "Please enter a prompt."
+            self.label.text = "Random image generated."
+            
             image_data = Ai(prompt)
             image_data = BytesIO(image_data)
             pil_image = PilImage.open(image_data)
